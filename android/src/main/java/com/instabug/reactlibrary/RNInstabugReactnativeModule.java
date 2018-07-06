@@ -243,7 +243,7 @@ public class RNInstabugReactnativeModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void dismiss() {
         try {
-            mInstabug.dismiss();
+            Instabug.dismiss();
         } catch (Exception e) {
             e.printStackTrace();
         }
