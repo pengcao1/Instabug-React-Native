@@ -39,6 +39,11 @@ RCT_EXPORT_METHOD(startWithToken:(NSString *)token invocationEvent:(IBGInvocatio
     if ([[Instabug class] respondsToSelector:setCrossPlatformSEL]) {
         [[Instabug class] performSelector:setCrossPlatformSEL withObject:@(true)];
     }
+
+    SEL setupForGoogleSEL = @selector(setupForGoogle);
+    if ([[Instabug class] respondsToSelector:setupForGoogleSEL]) {
+        [[Instabug class] performSelector:setupForGoogleSEL];
+    }
 }
 
 RCT_EXPORT_METHOD(invoke) {
