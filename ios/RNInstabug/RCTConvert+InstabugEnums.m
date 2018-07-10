@@ -99,7 +99,7 @@ RCT_ENUM_CONVERTER(IBGWelcomeMessageMode, (@{
                                     }), IBGWelcomeMessageModeLive, integerValue);
 
 
-RCT_ENUM_CONVERTER(IBGActionType, (@{
+RCT_ENUM_CONVERTER(IBGAction, (@{
                                     @"allActions": @(IBGActionAllActions),
                                     @"reportBug": @(IBGActionReportBug),
                                     @"requestNewFeature": @(IBGActionRequestNewFeature),

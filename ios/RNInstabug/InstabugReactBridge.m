@@ -421,7 +421,7 @@ RCT_EXPORT_METHOD(setShouldShowSurveysWelcomeScreen:(BOOL)shouldShowWelcomeScree
 
 RCT_EXPORT_METHOD(setEmailFieldRequiredForActions:(BOOL)isEmailFieldRequired
                  forAction:(NSArray *)actionTypesArray) {
-    IBGActionType actionTypes = 0;
+    IBGAction actionTypes = 0;
     
     for (NSNumber *boxedValue in actionTypesArray) {
          actionTypes |= [boxedValue intValue];
