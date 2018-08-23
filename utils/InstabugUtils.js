@@ -24,9 +24,12 @@ let init = () => {
         platform: 'react_native',
         exception: jsStackTrace
       }
+      console.log('IBGCrashLog ', `Exception ${e.name} - ${e.message} caught by global handler`);
       if(Platform.OS === 'android') {
+        console.log('IBGCrashLog ', 'Sending crash to native android');
         Instabug.sendJSCrash(JSON.stringify(jsonObject));
       } else {
+        console.log('IBGCrashLog ', 'Sending crash to native ios');
         Instabug.sendJSCrash(jsonObject);
       }
       if (originalHandler) {
